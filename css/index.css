@@ -1,0 +1,133 @@
+/* Variables */
+:root {
+    --primary-color: black;
+    --accent-color: #ff6347;
+    --text-color: white;
+    --header-height: 7rem;
+    --nav-font-size: 1.2rem;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+header nav img{
+    margin-right: 48rem;
+}
+
+header nav h3{
+    margin-right: auto;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--nav-font-size);
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+}
+
+header nav form {
+    margin-left: auto;
+}
+
+/* Section Cards */
+.section-cards {
+    display: flex;
+    flex-wrap: wrap;
+   margin-left: 3rem;
+    margin-top: 5rem;
+}
+
+
+       /* Modal de carrito */
+.modal-cart {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal-cart-content {
+    position: relative;
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo del carrito y contenido */
+#cartItems {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item h5 {
+    margin: 0;
+}
+
+.cart-item input {
+    width: 40px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 1rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section-cards {
+        margin: 2rem;
+        gap: 1rem;
+    }
+}
+

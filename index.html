@@ -3,9 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HoddieHub</title>
+    <link rel="shortcut icon" href="Assets/img/hoddiehub.png" type="image/x-icon">
+    <link rel="stylesheet" href="library/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    
+<header>
+   <nav>
+    <img src="Assets/img/hoddiehub2.png" alt="">
+    <h3>HoddieHub</h3>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+    <button id="cartButton" class="btn btn-outline-primary">Carrito</button>
+   </nav>
+</header>
+
+<main>
+  <div class="section-cards" id="product-list">
+    <!-- Ejemplo de producto (repetir según los productos disponibles) -->
+    <div class="card product" id="product-1" data-name="Hoodie Básico" data-price="35.99" style="width: 18rem;">
+      <img src="Assets/img/hoddie1.jpg" class="card-img-top" alt="Hoodie Básico">
+      <div class="card-body">
+        <h5 class="card-title">Hoodie Básico</h5>
+        <p class="card-text">Un hoodie cómodo y versátil para el día a día.</p>
+        <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+
+    <div class="card product" id="product-1" data-name="Hoodie Básico" data-price="35.99" style="width: 18rem;">
+      <img src="Assets/img/hoddie4.jpg" class="card-img-top" alt="Hoodie Básico">
+      <div class="card-body">
+        <h5 class="card-title">Hoodie Básico</h5>
+        <p class="card-text">Un hoodie cómodo y versátil para el día a día.</p>
+        <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+
+    <div class="card product" id="product-1" data-name="Hoodie Básico" data-price="35.99" style="width: 18rem;">
+      <img src="Assets/img/hoddie5.jpg" class="card-img-top" alt="Hoodie Básico">
+      <div class="card-body">
+        <h5 class="card-title">Hoodie Básico</h5>
+        <p class="card-text">Un hoodie cómodo y versátil para el día a día.</p>
+        <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+
+    <div class="card product" id="product-1" data-name="Hoodie Básico" data-price="35.99" style="width: 18rem;">
+      <img src="Assets/img/hoddie6.jpg" class="card-img-top" alt="Hoodie Básico">
+      <div class="card-body">
+        <h5 class="card-title">Hoodie Básico</h5>
+        <p class="card-text">Un hoodie cómodo y versátil para el día a día.</p>
+        <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+
+    <div class="card product" id="product-1" data-name="Hoodie Básico" data-price="35.99" style="width: 18rem;">
+      <img src="Assets/img/hoddie7.jpg" class="card-img-top" alt="Hoodie Básico">
+      <div class="card-body">
+        <h5 class="card-title">Hoodie Básico</h5>
+        <p class="card-text">Un hoodie cómodo y versátil para el día a día.</p>
+        <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+
+    <div class="card product" id="product-1" data-name="Hoodie Básico" data-price="35.99" style="width: 18rem;">
+      <img src="Assets/img/hoddie10.jpg" class="card-img-top" alt="Hoodie Básico">
+      <div class="card-body">
+        <h5 class="card-title">Hoodie Básico</h5>
+        <p class="card-text">Un hoodie cómodo y versátil para el día a día.</p>
+        <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+
+    <div class="card product" id="product-1" data-name="Hoodie Básico" data-price="35.99" style="width: 18rem;">
+      <img src="Assets/img/hoodie2.jpg" class="card-img-top" alt="Hoodie Básico">
+      <div class="card-body">
+        <h5 class="card-title">Hoodie Básico</h5>
+        <p class="card-text">Un hoodie cómodo y versátil para el día a día.</p>
+        <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+
+    <div class="card product" id="product-1" data-name="Hoodie Básico" data-price="35.99" style="width: 18rem;">
+      <img src="Assets/img/hoodie3.jpg" class="card-img-top" alt="Hoodie Básico">
+      <div class="card-body">
+        <h5 class="card-title">Hoodie Básico</h5>
+        <p class="card-text">Un hoodie cómodo y versátil para el día a día.</p>
+        <button class="btn btn-primary add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+    <!-- Agregar más productos según sea necesario -->
+  </div>
+</main>
+
+<!-- Modal flotante para el carrito en el lado derecho -->
+<div id="cartModal" class="modal-cart">
+  <div class="cart-modal-content">
+    <span class="close-cart">&times;</span>
+    <h2>Carrito de Compras</h2>
+    <div id="cartItems"></div>
+    <h4>Total: $<span id="totalPrice">0.00</span></h4>
+    <button id="checkoutButton" class="btn btn-success">Pagar</button> <!-- Botón de pago -->
+</div>
+
+</div>
+
+<script src="src/js/carrito.js"></script>
 </body>
 </html>
