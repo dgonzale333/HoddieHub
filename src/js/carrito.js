@@ -6,14 +6,14 @@ const cartItemsContainer = document.getElementById('cartItems');
 const totalPriceElement = document.getElementById('totalPrice');
 const checkoutButton = document.getElementById('checkoutButton'); // Botón de pago
 
-// Mostrar/ocultar modal del carrito
+
 cartButton.onclick = () => cartModal.style.display = 'block';
 closeCart.onclick = () => cartModal.style.display = 'none';
 window.onclick = event => {
     if (event.target === cartModal) cartModal.style.display = 'none';
 };
 
-// Función para agregar producto al carrito
+
 document.querySelectorAll('.add-to-cart').forEach(button => {
     button.onclick = event => {
         const productCard = event.target.closest('.product');
@@ -33,7 +33,7 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     };
 });
 
-// Función para actualizar la visualización del carrito
+
 function updateCartDisplay() {
     cartItemsContainer.innerHTML = '';
     let total = 0;
@@ -52,7 +52,7 @@ function updateCartDisplay() {
             <span>$${itemTotal.toFixed(2)}</span>
         `;
 
-        // Event listener para cambiar la cantidad
+        
         cartItem.querySelector('.cart-quantity').onchange = event => {
             const newQuantity = parseInt(event.target.value);
             if (newQuantity > 0) {
@@ -61,7 +61,7 @@ function updateCartDisplay() {
             }
         };
 
-        // Event listener para eliminar producto
+        
         cartItem.querySelector('.remove-item').onclick = () => {
             cart.splice(cart.indexOf(item), 1);
             updateCartDisplay();
@@ -73,21 +73,21 @@ function updateCartDisplay() {
     totalPriceElement.textContent = total.toFixed(2);
 }
 
-// Función para simular el pago
+
 checkoutButton.onclick = () => {
     if (cart.length === 0) {
         alert("El carrito está vacío. Agrega productos antes de pagar.");
         return;
     }
 
-    // Simulación de procesamiento de pago
+   
     alert(`Procesando el pago de $${totalPriceElement.textContent}...`);
     
-    // Vaciar el carrito y actualizar la visualización
+    
     cart.length = 0;
     updateCartDisplay();
 
-    // Confirmación de pago exitoso
+    
     alert("Pago realizado con éxito. ¡Gracias por tu compra!");
     cartModal.style.display = 'none';
 };

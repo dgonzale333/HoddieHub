@@ -7,14 +7,14 @@
     --nav-font-size: 1.2rem;
 }
 
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Header */
+
 header {
     height: var(--header-height);
     background-color: var(--primary-color);
@@ -55,7 +55,7 @@ header nav form {
     margin-left: auto;
 }
 
-/* Section Cards */
+
 .section-cards {
     display: flex;
     flex-wrap: wrap;
@@ -64,7 +64,7 @@ header nav form {
 }
 
 
-       /* Modal de carrito */
+      
 .modal-cart {
     display: none;
     position: fixed;
@@ -90,7 +90,7 @@ header nav form {
     cursor: pointer;
 }
 
-/* Estilo del carrito y contenido */
+
 #cartItems {
     margin-top: 20px;
 }
@@ -112,22 +112,4 @@ header nav form {
     text-align: center;
 }
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        height: auto;
-        padding: 1rem;
-    }
-
-    header nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .section-cards {
-        margin: 2rem;
-        gap: 1rem;
-    }
-}
 
